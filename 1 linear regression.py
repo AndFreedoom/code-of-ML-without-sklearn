@@ -25,7 +25,7 @@ class MyLinearRegression():
         m_samples, n_features = X.shape                                      # !!!
         self.initialize_weights(n_features)
         X = np.insert(X, 0, 1, axis=1)                                      #二维数组，每行加一。相当于前面添加了一列。
-        y = np.reshape(y, (m_samples, 1))                                    #二维数组，m 行一列。为了便于直接用向量计算
+        y = np.reshape(y, (m_samples, 1))                                   #二维数组，m 行一列。为了便于直接用向量计算
         self.training_errors = []
         if self.gradient == True:
             # 梯度下降

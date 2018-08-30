@@ -45,7 +45,7 @@ class Logisticregression():
         h_x = X_test.dot(self.w)
         y_pripr_1 = (1/(1+np.exp(-h_x)))
         y_pripr_0 = 1 - y_pripr_1
-        y_cal = y_pripr_1 - y_pripr_0             #这里实质是与0.5比较
+        y_cal = y_pripr_1 - y_pripr_0             #这里实质是与0.5比较,实际中可以调节
         y_class = np.where(y_cal > 0, 1, 0)
         return y_class
 

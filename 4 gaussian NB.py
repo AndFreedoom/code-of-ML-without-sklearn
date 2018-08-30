@@ -17,7 +17,7 @@ class NaiveBayes():
 
         self._X_train = X_train
         self._y_train = y_train
-        self._classes = np.unique(self._y_train)                       #  得到各个类别
+        self._classes = np.unique(self._y_train)                           # 得到各个类别
         priorlist = []
         meanmat0 = np.array([[0, 0, 0, 0]])
         varmat0 = np.array([[0, 0, 0, 0]])

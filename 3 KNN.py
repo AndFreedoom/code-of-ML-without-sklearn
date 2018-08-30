@@ -34,7 +34,7 @@ class KNNClassify():
                 vola = self._y_train[sorted_distance_index[i]]
                 class_count[vola] = class_count.get(vola, 0) + 1             # 统计k个点中所属各个类别的实例数目
 
-            sorted_class_count = sorted(class_count.items(), key=operator.itemgetter(1), reverse=True)    # 返回列表，元素为元组。每个类别以及对应的实例数目
+            sorted_class_count = sorted(class_count.items(), key=operator.itemgetter(1), reverse=True) # 返回列表，元素为元组。每个类别以及对应的实例数目
             y_pre.append((sorted_class_count[0][0]))
         return (np.array(y_pre))
 
